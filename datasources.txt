@@ -1,0 +1,25 @@
+Datasources:
+
+Oracle
+-------
+spring.datasource.url=jdbc:oracle:thin:@//delphi:1521/TSTA
+spring.datasource.username=tu0003X
+spring.datasource.password=tu0003X
+spring.datasource.driver-class-name = oracle.jdbc.OracleDriver
+
+
+H2
+------
+spring.datasource.url=jdbc:h2:file:C:/temp/h2dbspringfundamentals/h2db
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=h2user
+spring.datasource.password=h2pass
+
+
+SQL Server
+-----------
+spring.datasource.url=jdbc:sqlserver://tosfeb3fa\\SQLEXPRESS;database=training;encrypt=true;trustServerCertificate=true;
+spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
+spring.datasource.username=tu0004X
+spring.datasource.password=tu0004X
+
