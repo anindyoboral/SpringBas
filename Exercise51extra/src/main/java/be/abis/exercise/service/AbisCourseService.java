@@ -3,28 +3,16 @@ package be.abis.exercise.service;
 import be.abis.exercise.model.Course;
 import be.abis.exercise.repository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component("abisCourseService")
+@Component
 public class AbisCourseService implements CourseService {
 
-
-    @Autowired CourseRepository courseRepository;
-
-
-    public AbisCourseService(CourseRepository courseRepository) {
-        this.courseRepository = courseRepository;
-    }
-
-    public CourseRepository getCourseRepository() {
-        return courseRepository;
-    }
-
-    public void setCourseRepository(CourseRepository courseRepository) {
-        this.courseRepository = courseRepository;
-    }
+    @Autowired
+    CourseRepository courseRepository;
 
     @Override
     public List<Course> findAllCourses() {
@@ -32,7 +20,7 @@ public class AbisCourseService implements CourseService {
     }
 
     @Override
-    public Course findCourse(int id) {
+    public Course findCourse(int id)  {
         return courseRepository.findCourse(id);
     }
 

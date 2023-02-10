@@ -1,7 +1,6 @@
 package be.abis.exercise.repository;
 
 import be.abis.exercise.model.Course;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -9,8 +8,7 @@ import java.util.List;
 
 @Component
 public class MemoryCourseRepository implements CourseRepository {
-
-
+	
 	private ArrayList<Course> courses = new ArrayList<Course>();
 	
 	public MemoryCourseRepository(){

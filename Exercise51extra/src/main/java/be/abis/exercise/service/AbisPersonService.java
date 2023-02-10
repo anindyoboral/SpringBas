@@ -3,6 +3,7 @@ package be.abis.exercise.service;
 import be.abis.exercise.model.Person;
 import be.abis.exercise.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -11,12 +12,13 @@ import java.util.ArrayList;
 @Service
 public class AbisPersonService implements PersonService {
 
+    @Autowired
     private PersonRepository personRepository;
 
-    @Autowired
-    public AbisPersonService(PersonRepository personRepository) {
+   //(required=false)
+   /* public AbisPersonService(PersonRepository personRepository) {
         this.personRepository = personRepository;
-    }
+    }*/
 
     public PersonRepository getPersonRepository() {
         return personRepository;
