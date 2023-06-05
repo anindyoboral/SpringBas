@@ -1,30 +1,18 @@
 package be.abis.exercise.service;
 
 import be.abis.exercise.model.Course;
+import be.abis.exercise.model.Person;
 import be.abis.exercise.repository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Component("abisCourseService")
+@Component
 public class AbisCourseService implements CourseService {
-
-
-    @Autowired CourseRepository courseRepository;
-
-
-    public AbisCourseService(CourseRepository courseRepository) {
-        this.courseRepository = courseRepository;
-    }
-
-    public CourseRepository getCourseRepository() {
-        return courseRepository;
-    }
-
-    public void setCourseRepository(CourseRepository courseRepository) {
-        this.courseRepository = courseRepository;
-    }
+    @Autowired
+    private CourseRepository courseRepository;
 
     @Override
     public List<Course> findAllCourses() {

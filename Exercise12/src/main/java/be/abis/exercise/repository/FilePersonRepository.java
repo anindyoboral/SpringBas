@@ -3,6 +3,8 @@ package be.abis.exercise.repository;
 import be.abis.exercise.model.Address;
 import be.abis.exercise.model.Company;
 import be.abis.exercise.model.Person;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -11,7 +13,7 @@ import java.util.Iterator;
 public class FilePersonRepository implements PersonRepository {
 
 	private ArrayList<Person> allPersons;
-	private String fileLoc = "/temp/javacourses/personsSpring.csv";
+	private String fileLoc  ="/temp/javacourses/personsSpring.csv";
 
 	public FilePersonRepository() {
 		allPersons = new ArrayList<Person>();
