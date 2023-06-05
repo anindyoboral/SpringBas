@@ -10,22 +10,8 @@ import java.util.List;
 @Component
 public class AbisCourseService implements CourseService {
 
-  //
+    @Autowired
     private CourseRepository courseRepository;
-
-    @Autowired
-    public AbisCourseService(CourseRepository cr){
-        this.courseRepository=cr;
-    }
-
-    public CourseRepository getCourseRepository() {
-        return courseRepository;
-    }
-
-    @Autowired
-    public void setCourseRepository(CourseRepository courseRepository) {
-        this.courseRepository = courseRepository;
-    }
 
     @Override
     public List<Course> findAllCourses() {
