@@ -2,6 +2,7 @@ package be.abis.exercise;
 
 import be.abis.exercise.model.Course;
 import be.abis.exercise.model.Person;
+import be.abis.exercise.service.AbisTrainingService;
 import be.abis.exercise.service.TrainingService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +21,10 @@ public class TestTrainingService {
 	public void testWelcomeMessage(){
 		assertEquals("Welcome to the Abis Training Service",trainingService.getWelcomeMessage());
 	}
+
 	@Test
 	public void course7900isWorkshopSQL() {
-		Course c = trainingService.getCourseService().findCourse(7900);
+		Course c = ((AbisTrainingService)trainingService).getCourseService().findCourse(7900);
 		assertEquals("WORKSHOP SQL",c.getShortTitle().toUpperCase());
 	}
 

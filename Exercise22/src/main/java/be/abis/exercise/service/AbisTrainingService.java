@@ -3,7 +3,10 @@ package be.abis.exercise.service;
 import be.abis.exercise.exception.EnrollException;
 import be.abis.exercise.model.Course;
 import be.abis.exercise.model.Person;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -19,7 +22,7 @@ public class AbisTrainingService implements TrainingService {
         return welcomeMessage;
     }
 
-    @Value("Welcome to the Abis Training Service")
+    //@Value("Welcome to the Abis Training Service value")
     public void setWelcomeMessage(String welcomeMessage) {
         this.welcomeMessage = welcomeMessage;
     }
@@ -28,12 +31,12 @@ public class AbisTrainingService implements TrainingService {
         return personService;
     }
 
-    public void setPersonService(PersonService personService) {
-        this.personService = personService;
-    }
-
     public CourseService getCourseService() {
         return courseService;
+    }
+
+    public void setPersonService(PersonService personService) {
+        this.personService = personService;
     }
 
     public void setCourseService(CourseService courseService) {
