@@ -3,7 +3,6 @@ package be.abis.exercise.service;
 import be.abis.exercise.exception.EnrollException;
 import be.abis.exercise.model.Course;
 import be.abis.exercise.model.Person;
-
 import java.time.LocalDate;
 import java.util.List;
 
