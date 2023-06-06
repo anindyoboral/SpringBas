@@ -11,7 +11,7 @@ public interface TrainingService {
 
     public String getWelcomeMessage();
     public PersonService getPersonService();
-    public CourseService getCourseService();
+    //public CourseService getCourseService();
 
     public List<Course> showFollowedCourses(Person person);
 

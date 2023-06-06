@@ -24,13 +24,6 @@ public class TestSomePersonService {
 
 	@Test
 	public void person4ShouldBeCalledSandy(){
-
-	/*	AnnotationConfigApplicationContext ctx
-				= new AnnotationConfigApplicationContext();
-	//	ctx.refresh();
-		env.setActiveProfiles("dev");
-		System.out.println("profile now is " + env.getActiveProfiles()[0]);
-		personService = ctx.getBean(PersonService.class);*/
 		String firstName = personService.findPerson("sschillebeeckx@abis.be","abc123").getFirstName();
 		assertEquals("Sandy",firstName);
 	}
