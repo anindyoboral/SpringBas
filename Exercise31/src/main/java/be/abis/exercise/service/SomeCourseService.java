@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-@Qualifier("some")
+@Service("some")
+//@Qualifier("some")
 public class SomeCourseService implements CourseService{
     @Override
     public List<Course> findAllCourses() {

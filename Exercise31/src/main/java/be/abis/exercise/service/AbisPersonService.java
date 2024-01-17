@@ -3,6 +3,7 @@ package be.abis.exercise.service;
 import be.abis.exercise.model.Person;
 import be.abis.exercise.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;

@@ -17,7 +17,7 @@ public class Exercise31Application {
     }
 
     @Bean
-    public TrainingService trainingService(PersonService ps, @Qualifier("abis") CourseService cs){
+    public TrainingService trainingService(PersonService ps, /*@Qualifier("abisCourseService")*/ CourseService cs){
         AbisTrainingService ts = new AbisTrainingService();
         ts.setCourseService(cs);
         ts.setPersonService(ps);

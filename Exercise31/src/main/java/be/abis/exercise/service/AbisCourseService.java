@@ -4,12 +4,15 @@ import be.abis.exercise.model.Course;
 import be.abis.exercise.repository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @Component
-@Qualifier("abis")
+//@Component("abis")
+//@Qualifier("abis")
+@Primary
 public class AbisCourseService implements CourseService {
 
     @Autowired

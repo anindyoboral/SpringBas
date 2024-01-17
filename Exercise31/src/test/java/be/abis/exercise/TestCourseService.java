@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TestCourseService {
 	
 	@Autowired
-	@Qualifier("abis")
+	//@Qualifier("abisCourseService")
 	CourseService courseService;
 	
 	@Test
