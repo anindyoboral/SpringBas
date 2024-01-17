@@ -9,14 +9,19 @@ import javax.annotation.PostConstruct;
 import java.time.LocalDate;
 import java.util.List;
 
-
 public class AbisTrainingService implements TrainingService {
+
 
     private String welcomeMessage;
     private PersonService personService;
     private CourseService courseService;
 
-    @PostConstruct
+    public AbisTrainingService(PersonService personService, CourseService courseService) {
+        this.personService = personService;
+        this.courseService = courseService;
+    }
+
+    //@PostConstruct
     public void init(){
         System.out.println("AbisTrainingService is ready for work!");
     }
@@ -26,7 +31,7 @@ public class AbisTrainingService implements TrainingService {
         return welcomeMessage;
     }
 
-    @Value("Welcome to the Abis Training Service")
+    //@Value("Welcome via @Value")
     public void setWelcomeMessage(String welcomeMessage) {
         this.welcomeMessage = welcomeMessage;
     }

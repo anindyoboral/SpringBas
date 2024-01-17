@@ -14,11 +14,10 @@ public class Exercise23Application {
         SpringApplication.run(Exercise23Application.class, args);
     }
 
-    @Bean
+    @Bean(initMethod="init")
     public TrainingService abisTrainingService(PersonService ps, CourseService cs){
-        AbisTrainingService ts = new AbisTrainingService();
-        ts.setCourseService(cs);
-        ts.setPersonService(ps);
+        AbisTrainingService ts = new AbisTrainingService(ps,cs);
+        ts.setWelcomeMessage("Welcome to the Abis Training Service");
         return ts;
     }
 

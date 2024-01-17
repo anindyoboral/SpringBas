@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 public interface TrainingService {
+    void init();
 
     public String getWelcomeMessage();
     public PersonService getPersonService();
